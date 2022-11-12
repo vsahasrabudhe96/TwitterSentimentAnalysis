@@ -86,7 +86,7 @@ def preprocessing(df,col):
     
     df[col] = df[col].apply(lambda x:x.lower())
     
-    df = df.loc[:,df.columns.isin([col])]
-    return df
+    fdf = df.loc[:,df.columns.isin([col])]
+    return fdf
     
     

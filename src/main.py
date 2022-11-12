@@ -4,7 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns
+from clustering import clustering
+import warnings
 
+warnings.filterwarnings(action='ignore')
 
 
 def main():
@@ -14,6 +17,11 @@ def main():
     df = preprocessing(data,'text')
 
     print(df.head())
+    
+    final_df = clustering(df,'text')
+    
+    print(final_df.head())
+    
 
 
 if __name__ == '__main__':
